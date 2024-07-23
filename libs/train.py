@@ -444,8 +444,7 @@ class Training:
 			val_dataloader = self.pro_data.create_dataloader(val_features, val_label, self.args.batchTS)
 			return train_dataloader, val_dataloader, q_accuracy
 	
-	# test process
-	
+	# calculate per-class accuracy
 	def compute_per_class_acc(self, real_labels, predict_labels, target_classes):
 		target_classes = self.pro_data.realign_labels(
 			target_classes) if self.args.AZSL_test == 'zsl' else target_classes
@@ -569,7 +568,7 @@ class Training:
 		else:
 			print('Wong parameter! Available parameter contain "teacher", "generator", "student"')
 	
-	# Load pre-train model base on name, available parameters contain: 'teacher', 'generator', 'student'
+	# Load pre-train model based on the model name, available parameters contain: 'teacher', 'generator', 'student'
 	def load_model(self, model_name):
 		model = self.__getattribute__(model_name)
 		if not self.args.disable_dp and model_name=='teacher':

@@ -210,11 +210,11 @@ class Args:
 		)
 		
 		self.parser.add_argument(
-        "--sigma",
-        type=float,
-        default=1.0,
-        metavar="S",
-        help="Noise multiplier (default 1.0)",)
+        		"--sigma",
+       			type=float,
+        		default=1.0,
+        		metavar="S",
+        		help="Noise multiplier (default 1.0)",)
 		
 		self.parser.add_argument("-c", "--max-per-sample-grad_norm", type=float, default=1.0, metavar="C", help="Clip per-sample gradients to this norm (default 1.0)")
 		self.parser.add_argument('--epslion', type=float, default=50.0)

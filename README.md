@@ -1,3 +1,5 @@
+# The code is for the paper of 'Sentinel-Guided Zero-Shot Learning: A Collaborative Paradigm without Real Data Exposure' and 'Privacy-Enhanced Zero-Shot Learning via Data-Free Knowledge Transfer'.
+
 ## Environment
 
 - python:3.6.13

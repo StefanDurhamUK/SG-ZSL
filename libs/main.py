@@ -181,19 +181,7 @@ if args.test:
                                                                 test_by_categories=True, seen_or_unseen='unseen')
                 print('\n', '*' * 40, ' | Test Result | ', '*' * 40, '\n',
                       ' | Acc_unseen_class:{:.2f}% |'.format(acc_unseen))
-        # elif args.AZSL_test == 'gzsl':
-        #     # Load pre-train teacher model
-        #     train.load_best_model('teacher')
-        #     # Test teacher model
-        #     teacher_test_dataloader = train.obtain_dataset(model_name='z_net')
-        #     acc_seen = train.test_model_or_filter_samples([teacher_test_dataloader], teacher_or_student=train.teacher,
-        #                                                   test_by_categories=True, seen_or_unseen='seen')
-        #     acc_unseen = train.test_model_or_filter_samples([teacher_test_dataloader], teacher_or_student=train.teacher,
-        #                                                     test_by_categories=True, seen_or_unseen='unseen')
-        #     H = 0 if acc_seen == 0 and acc_unseen == 0 else 2 * acc_seen * acc_unseen / (acc_seen + acc_unseen)
-        #     print('\n', '*' * 40, ' | Test Result | ', '*' * 40, '\n',
-        #           '| Acc_seen_class:{:.2f}% | Acc_unseen_class:{:.2f}% |  H={:.2f} |'.format(acc_seen, acc_unseen, H))
-        #
+   
     elif args.task_categories == 'GZSL_all':
         train.load_model('student')
         # Obtain test dataset
@@ -213,42 +201,9 @@ if args.test:
         print('\n', '*' * 40, ' | Test Result | ', '*' * 40, '\n',
               '| Acc_seen_class:{:.2f}% | Acc_unseen_class:{:.2f}% |  H={:.2f} |'.format(acc_seen, acc_unseen, H))
 end.record()
-# elif args.AZSL_test == 'gzsl':
-# Load pre-train teacher model
-#         train.load_best_model('teacher')
-#         indices = {'a': 'tunseen_test_loc', 'b': 'test_seen_loc'}
-#         test_unseen_features, test_unseen_labels, test_seen_features, test_seen_labels = train.pro_data.cuda_data(
-#             train.pro_data.split_data_by_indices(**indices))
-#         test_seen_dataloader = train.pro_data.create_dataloader(test_seen_features, test_seen_labels, args.batchTS,
-#                                                                 drop_last=False)
-#         test_unseen_dataloader = train.pro_data.create_dataloader(test_unseen_features, test_unseen_labels,
-#                                                                   args.batchTS, drop_last=False)
-#         acc_seen = train.test_model_or_filter_samples([test_seen_dataloader], teacher_or_student=train.teacher,
-#                                                       test_by_categories=True, seen_or_unseen='seen')
-#         acc_unseen = train.test_model_or_filter_samples([test_unseen_dataloader],
-#                                                         teacher_or_student=train.teacher,
-#                                                         test_by_categories=True, seen_or_unseen='unseen')
-#         H = 0 if acc_seen == 0 and acc_unseen == 0 else 2 * acc_seen * acc_unseen / (acc_seen + acc_unseen)
-#         print('\n', '*' * 40, ' | Test Result | ', '*' * 40, '\n',
-#               '| Acc_seen_class:{:.2f}% | Acc_unseen_class:{:.2f}% |  H={:.2f} |'.format(acc_seen, acc_unseen, H))
-# end.record()
-#         # Test teacher model
-#         teacher_test_dataloader = train.obtain_dataset(model_name='z_net')
-#         acc_seen = train.test_model_or_filter_samples([teacher_test_dataloader], teacher_or_student=train.teacher,
-#                                                       test_by_categories=True, seen_or_unseen='seen')
-#         acc_unseen = train.test_model_or_filter_samples([teacher_test_dataloader], teacher_or_student=train.teacher,
-#                                                         test_by_categories=True, seen_or_unseen='unseen')
-#         H = 0 if acc_seen == 0 and acc_unseen == 0 else 2 * acc_seen * acc_unseen / (acc_seen + acc_unseen)
-#         print('\n', '*' * 40, ' | Test Result | ', '*' * 40, '\n',
-#               '| Acc_seen_class:{:.2f}% | Acc_unseen_class:{:.2f}% |  H={:.2f} |'.format(acc_seen, acc_unseen, H))
+
 
 # Draw T-SNE graph
-"""
-问题1：目前数据比较少，理想情况下每个类中选出200-300个数据来画TSNE,但是目前有几个类数据严重不足，例如AWA1 第20类 第8类数据
-解决方案一： 整个数据集都塞进去试一试
-解决方案二： 类别少的类区全部的数据（<200）剩下的类别取（=200），
-问题2： TSNE数据真假数据是否需要数量相等
-"""
 if args.do_tsne:
     teacher_indices = {'a': 'test_unseen_loc'} if args.tsne_data == 'test' else {'b': 'trainval_loc'}
     generator_indices = train.test_cls_wb if args.tsne_data == 'test' else train.train_cls_wb

@@ -1,6 +1,6 @@
 # The code are for the papers: 
-- '[Sentinel-Guided Zero-Shot Learning: A Collaborative Paradigm without Real Data Exposure](https://ieeexplore.ieee.org/abstract/document/10489996)'
-- '[Privacy-Enhanced Zero-Shot Learning via Data-Free Knowledge Transfer](https://ieeexplore.ieee.org/abstract/document/10489996)'
+- '[Sentinel-Guided Zero-Shot Learning: A Collaborative Paradigm without Real Data Exposure](https://ieeexplore.ieee.org/abstract/document/10489996)', published in IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS FOR VIDEO TECHNOLOGY (TCSVT)
+- '[Privacy-Enhanced Zero-Shot Learning via Data-Free Knowledge Transfer](https://ieeexplore.ieee.org/abstract/document/10489996)', published in 2023 IEEE International Conference on Multimedia and Expo (ICME)
 - '[Absolute Zero-Shot Learning](https://arxiv.org/abs/2202.11319)'
 
 

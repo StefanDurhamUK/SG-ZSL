@@ -1,3 +1,5 @@
+# This file is for Preprocessing Data: Generate Semantic Information(e.g. from the BERT Model)
+
 import os
 import matplotlib.pyplot as plt
 import numpy as np

@@ -1,4 +1,7 @@
-# The code is for the paper of '[Sentinel-Guided Zero-Shot Learning: A Collaborative Paradigm without Real Data Exposure](https://ieeexplore.ieee.org/abstract/document/10489996)' and '[Privacy-Enhanced Zero-Shot Learning via Data-Free Knowledge Transfer](https://ieeexplore.ieee.org/abstract/document/10489996)'.
+# The code is for the paper 
+- '[Sentinel-Guided Zero-Shot Learning: A Collaborative Paradigm without Real Data Exposure](https://ieeexplore.ieee.org/abstract/document/10489996)'
+- '[Privacy-Enhanced Zero-Shot Learning via Data-Free Knowledge Transfer](https://ieeexplore.ieee.org/abstract/document/10489996)'
+- '[Absolute Zero-Shot Learning](https://arxiv.org/abs/2202.11319)'
 
 
 ## Environment

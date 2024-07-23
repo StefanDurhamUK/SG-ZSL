@@ -49,14 +49,4 @@
             - unseen fake data + real trainval data -> Z_net training (allclasses space)
             - real unseen + test_seen data-> Z_net -> obtain acc_unseen,acc_seen, H
     
-## Done:
-- White-box experiment
-- Black-box experiment
-- Generate Bert information for CUB and SUN, upload the new dataset to Teams Channel  
-- Store experiment results into Excel automatically
-- Create bash script to run all experiments automatically
-- Fixed all bugs
 
-## TODO
-- Tensorboard
-- KL divergence

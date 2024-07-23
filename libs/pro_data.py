@@ -324,163 +324,18 @@ class ProData:
 			color = color_map(i / num_cls)
 			plt.scatter(embedded_data[combine_labels == i, 0], embedded_data[combine_labels == i, 1], s=30, marker='o',
 			            label='Real Class {}'.format(i), alpha=0.6, c=color)
-		# 绘制假数据的散点图，设置形状为方形
+		# Draws a scatter plot of the fake data and sets the shape to a square
 		for i in range(num_cls):
 			color = color_map(i / num_cls)
 			plt.scatter(embedded_data[combine_labels == i + num_cls, 0],
 			            embedded_data[combine_labels == i + num_cls, 1], s=30,
 			            marker='^', label='Fake Class {}'.format(i), alpha=0.6, c=color)
-		# 添加图例
+		# Add legend
 		# plt.legend(loc='lower right', markerscale=0.5, fontsize=8)
 		plt.legend(loc='upper left', bbox_to_anchor=(1.01, 1), markerscale=0.5, fontsize=8)
 		plt.tight_layout()
 		plt.show()
 		
-		# # 定义颜色和形状
-		# color_list = [(31, 119, 180), (255, 127, 14), (44, 160, 44), (214, 39, 40), (148, 103, 189),
-		#               (140, 86, 75), (227, 119, 194), (127, 127, 127), (188, 189, 34), (23, 190, 207)]
-		# colors = [(r / 255, g / 255, b / 255) for (r, g, b) in color_list]
-		# color_map = ListedColormap(colors)
-		# color_map = plt.cm.get_cmap("tab20", 20)
-		# # marker_map = ["o", "s"]
-		# # marker_list = ["o", "s"]
-		# marker_map = {0: "s", 1: "o"}
-		#
-		# # 绘制降维后的数据分布图
-		# fig, ax = plt.subplots(figsize=(10, 8))
-		# # for i in range(20):
-		# #     indices = combine_labels == i
-		# #     color = colors[i]  # 调整颜色映射的范围
-		# #     marker = marker_list[0] if i < 10 else marker_list[1]
-		# #     # 绘制数据点，标签包含真假和类别信息
-		# #     plt.scatter(embedded_data[indices, 0], embedded_data[indices, 1], c=color, marker=marker, alpha=0.5,
-		# #                 label=("Fake" if i >= 10 else "Real") + " Class " + str(i % 10))
-		# for i in range(20):
-		#     indices = (combine_labels == i) & (np.arange(len(combine_labels)) < 1000)  # 找到标签为i且下标不大于1000的数据的下标
-		#     color = color_map(i)  # 根据i的值从colormap中选取一个颜色
-		#     marker = marker_map[i // 10] if i < 10 else marker_map[(i - 10) // 10]  # 根据i的值选择形状
-		#     plt.scatter(embedded_data[indices, 0], embedded_data[indices, 1], c=color, marker=marker, alpha=0.5,
-		#                 label=("Fake" if i >= 10 else "Real") + " Class " + str(i % 10))  # 绘制数据点，标签包含真假和类别信息
-		#     if i == 9:
-		#         plt.legend(loc="upper right")  # 添加图例
-		# plt.show()
-		# 添加图例
-		# plt.legend(loc="upper left", bbox_to_anchor=(1.02, 1.0))
-		# plt.show()
-		#     marker = marker_map[i % 2]
-		#     plt.scatter(embedded_data[indices, 0], embedded_data[indices, 1], c=color, marker=marker, alpha=0.5,
-		#                 label=("Fake" if i >= 10 else "Real") + " Class " + str(i))
-		#     if i == 9:
-		#         plt.legend(loc="lower right")
-		# plt.show()
-		
-		# for i in range(20):
-		#     indices = combine_labels == i
-		#     color = color_map(i)
-		#     marker = marker_map[i % 2]
-		#     ax.scatter(embedded_data[indices, 0], embedded_data[indices, 1], c=color, marker=marker, alpha=0.5,
-		#                label=("Fake" if i >= 10 else "Real") + " Class " + str(i % 10))
-		# plt.show()
-		# # 添加 colorbar 显示颜色对应的类别
-		# sm = plt.cm.ScalarMappable(cmap=color_map, norm=plt.Normalize(vmin=0, vmax=19))
-		# sm.set_array([])
-		# cbar = plt.colorbar(sm, ticks=np.arange(20))
-		# cbar.ax.set_yticklabels([("Real" if i < 10 else "Fake") + " Class"])
-		
-		# tsne = TSNE(perplexity=self.args.perplexity, exaggeration=self.args.exaggeration, metric="euclidean",
-		#                         n_jobs=2, n_iter=self.args.tsne_n_iter,
-		#                         random_state=42)
-		# tsne = TSNE(n_components=2, metric="euclidean", perplexity=30, n_jobs=-1)
-		#
-		# embedded_data = tsne.fit(combine_features)
-		#
-		# color_map = plt.cm.get_cmap("hsv", 20)
-		# marker_map = ["o", "s"]
-		#
-		# # 绘制降维后的数据分布图
-		# plt.figure(figsize=(10, 8))
-		# for i in range(20):
-		#     indices = combine_labels == i
-		#     color = color_map(i)
-		#     marker = marker_map[i % 2]
-		#     # plt.scatter(embedded_data[indices, 0], embedded_data[indices, 1], c=color, marker=marker, alpha=0.5)
-		#     plt.scatter(embedded_data[indices, 0], embedded_data[indices, 1], c=color, marker=marker, alpha=0.5,
-		#                 label=("Fake" if i >= 10 else "Real") + " Class " + str(i))
-		#     if i == 9:
-		#         plt.legend(loc="center left", bbox_to_anchor=(1, 0.5))
-		# plt.show()
-		#
-		# plt.figure(figsize=(10, 8))
-		# for i in range(20):
-		#     indices = combine_labels == i
-		#     plt.scatter(embedded_data[indices, 0], embedded_data[indices, 1], c=f"C{teacher_labels[i]}",
-		#                 marker='o', alpha=0.5)
-		#     # plt.scatter(embedded_data[indices, 0], embedded_data[indices, 1], c=f"C{int(teacher_labels[i]) % 10}",
-		#     #             marker=shapes[indices], alpha=0.5)
-		# plt.show()
-		# def draw_chart(x, y, save_img_name=None, colors=None, selected_color=True):
-		#     if colors is None:
-		#         colors = self.COLOUR if selected_color else self.random_color(self.args.outSizeTS)
-		#     color_rgb = np.array(list(map(self.hex_to_rgb, colors)))
-		#     for i in range(len(y)):
-		#         plt.scatter(x[i, 0], x[i, 1], c=np.array([color_rgb[int(y[i])] / 255]), label=int(y[i]))
-		#     plt.xlim(-50, 50)
-		#     plt.ylim(-50, 50)
-		#     graph_save_path = os.path.join(self.args.graph_filepath, '{}.png'.format(save_img_name))
-		#     plt.savefig(graph_save_path)
-		#     plt.close()
-		#
-		#     return colors
-		#
-		# generator_features, generator_labels = obtain_fake_data()
-		# teacher_features, teacher_labels = data_t
-		# # teacher_labels = self.realign_labels(teacher_labels)
-		# generator_features, generator_labels = generator_features.to('cpu').numpy(), generator_labels.to('cpu').numpy()
-		# sel_generator_features, sel_generator_labels = self.scale_data_by_cls_and_num(generator_features,
-		#                                                                               generator_labels,
-		#                                                                               self.args.tsne_cls_num,
-		#                                                                               self.args.cls_samples_num,
-		#                                                                               random_selected=False,
-		#                                                                               marked_labels=marked_labels)
-		# # sel_generator_labels = self.realign_labels(sel_generator_labels)
-		# sel_generator_labels = sel_generator_labels.reshape((-1, 1)).squeeze(1)
-		# combine_features = np.vstack((teacher_features, sel_generator_features))
-		#
-		# tsne = TSNE(perplexity=self.args.perplexity, exaggeration=self.args.exaggeration, metric="euclidean",
-		#             n_jobs=2, n_iter=self.args.tsne_n_iter,
-		#             random_state=42)
-		# combine_features_2d = tsne.fit(combine_features)
-		# teacher_features_2d, generator_features_2d = combine_features_2d[:teacher_features.shape[0]], \
-		#                                              combine_features_2d[teacher_features.shape[0]:]
-		#
-		# files_name_suffix = '{}_{}_{}_{}.png'.format(self.args.cur_time, self.args.framework,
-		#                                              self.args.task_categories, self.args.dataset)
-		# graph_save_folder = os.path.join(self.args.tsne_graph_filepath, self.args.dataset, self.args.framework,
-		#                                  self.args.task_categories, self.args.cur_time)
-		#
-		# if not os.path.exists(graph_save_folder):
-		#     os.makedirs(graph_save_folder)
-		# # real features TSNE!
-		# plt.figure()
-		# tsne_api.plot(teacher_features_2d, teacher_labels.astype(np.int64), draw_centers=True, draw_cluster_labels=True)
-		# ff_save_path = os.path.join(graph_save_folder,
-		#                             '{}_{}_{}_{}'.format('RF', self.args.perplexity, self.args.exaggeration,
-		#                                                  files_name_suffix))
-		# plt.savefig(ff_save_path)
-		# plt.show()
-		# plt.close()
-		#
-		# # fake features TSNE!
-		# plt.figure()
-		# tsne_api.plot(generator_features_2d, sel_generator_labels.astype(np.int64), draw_centers=True)
-		# rf_save_path = os.path.join(graph_save_folder,
-		#                             '{}_{}_{}_{}'.format('FF', self.args.perplexity, self.args.exaggeration,
-		#                                                  files_name_suffix))
-		# plt.savefig(rf_save_path)
-		# plt.show()
-		# plt.close()
-		# exit(0)
-		"""
 		combine_features = np.vstack((teacher_features, sel_generator_features))
 		t_sne = TSNE(n_components=2, random_state=0, n_iter=self.args.tsne_n_iter, learning_rate=self.args.tsne_lr)
 		features_2d = t_sne.fit_transform(combine_features)

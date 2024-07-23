@@ -144,16 +144,6 @@ class Training:
 		return _max
 	
 	# Train generator model
-	"""
-	elif self.args.loss_type == 'ct_loss' and center_loss is not None:
-		assert center_loss is not None, 'please pass in center loss'
-		cen_loss = self.args.new_loss_weight * center_loss(fake_features, labels)
-		loss = cen_loss + loss
-	if self.args.loss_type == 'ct_loss' and center is not None:
-	for param in center.parameters():
-		param.grad.data *= (self.args.lr_cent / (self.args.new_loss_weight * self.args.lrG))
-	"""
-	
 	def train_generator(self, generator, teacher, epochs, optimizer, criterion, train_data, val_data,
 	                    model_save=True,
 	                    center=None):

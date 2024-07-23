@@ -200,12 +200,6 @@ class ExperimentResults:
         pd.set_option('max_colwidth', 1000)
         pd.set_option('display.unicode.ambiguous_as_wide', True)
 
-    """
-    models_name = ['teacher', 'generator', 'student'] if args.task_categories == 'GZSL_all' else ['teacher',
-                                                                                                 'generator',
-                                                                                                 'student', 'z_net']
-    models_full_name = list(map(lambda x: '{}_{}'.format(x, train.model_name_suffix), models_name))
-    """
 
 
 if __name__ == '__main__':

@@ -17,7 +17,7 @@
 - You can directly run main_experiment.sh file in doc folder.
 
 ## Citation
-If you publish work that uses Flower, please cite Flower as follows:
+If you publish work that uses SG-ZSL/PE-ZSL, please cite Flower as follows:
 
 @ARTICLE{10489996,
   author={Wan, Fan and Miao, Xingyu and Duan, Haoran and Deng, Jingjing and Gao, Rui and Long, Yang},

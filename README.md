@@ -24,8 +24,6 @@ If you publish work that uses Flower, please cite Flower as follows:
   journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
   title={Sentinel-Guided Zero-Shot Learning: A Collaborative Paradigm without Real Data Exposure}, 
   year={2024},
-  volume={},
-  number={},
   pages={1-1},
   keywords={Data models;Training;Data privacy;Protocols;Artificial intelligence;Computational modeling;Adaptation models;Data-Free Knowledge Transfer;Privacy Protection;Zero-Shot Learning},
   doi={10.1109/TCSVT.2024.3384756}}

@@ -45,7 +45,7 @@ class Args:
 		                         help='(1536) size of hidden units in Teacher Net,Student Net and Z Net(for test unseen)')
 		self.parser.add_argument('--hidSizeTSZ_3', type=int, default=256,
 		                         help='(1360) size of hidden units in Teacher Net,Student Net and Z Net(for test unseen)')
-		self.parser.add_argument('--outSizeTS', type=int, default=20,
+		self.parser.add_argument('--outSizeTS', type=int, default=32,
 		                         help='(1360) size if output dim for Teacher Net and Student Net;20 for apy')
 		self.parser.add_argument('--hidSizeG', type=int, default=4096,
 		                         help='(2048) size of hidden units in Generator Net')

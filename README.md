@@ -10,9 +10,9 @@
 - pytorch:1.9.0
 
 ## Dataset
-- Before start the training, you should download 
-- The entire dataset of this project is available in Teams group channels. (Folder name:DatasetForGroupProject)
-- [Dataset link](https://teams.microsoft.com/_#/school/files/Group%20Study?threadId=19%3A5c11800f52bf4af1b5bb33d792679435%40thread.tacv2&ctx=channel&context=DatasetForGroupPorject&rootfolder=%252Fteams%252FPerceptionLab%252FShared%2520Documents%252FGroup%2520Study%252FDatasetForGroupPorject)
+- Before starting the training, you should download dataset's features from  [Dataset link](https://teams.microsoft.com/_#/school/files/Group%20Study?threadId=19%3A5c11800f52bf4af1b5bb33d792679435%40thread.tacv2&ctx=channel&context=DatasetForGroupPorject&rootfolder=%252Fteams%252FPerceptionLab%252FShared%2520Documents%252FGroup%2520Study%252FDatasetForGroupPorject)
+- Zip file name:rest101_for_AWA1_AWA2_APY
+
 
 
     

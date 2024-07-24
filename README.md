@@ -13,7 +13,5 @@
 - Before starting the training, you should **download** dataset's features from  [Dataset link](https://teams.microsoft.com/_#/school/files/Group%20Study?threadId=19%3A5c11800f52bf4af1b5bb33d792679435%40thread.tacv2&ctx=channel&context=DatasetForGroupPorject&rootfolder=%252Fteams%252FPerceptionLab%252FShared%2520Documents%252FGroup%2520Study%252FDatasetForGroupPorject)
 - You can find it in the channel from **Hybrid Intelligence Lab - Durham University CS / Group Study / file / rest101_for_AWA1_AWA2_APY.zip**
 
-
-
-    
-
+## Train
+- You can directly run main_experiment.sh file in doc folder.

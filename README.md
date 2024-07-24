@@ -6,8 +6,8 @@
 
 ## Environment
 
-- python:3.6.13
-- pytorch:1.7.1
+- python:3.9.6
+- pytorch:1.9.0
 
 ## Dataset
 

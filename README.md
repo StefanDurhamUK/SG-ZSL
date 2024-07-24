@@ -15,3 +15,9 @@
 
 ## Train
 - You can directly run main_experiment.sh file in doc folder.
+
+## Citation
+If you publish work that uses Flower, please cite Flower as follows:
+{F. Wan, X. Miao, H. Duan, J. Deng, R. Gao and Y. Long, "Sentinel-Guided Zero-Shot Learning: A Collaborative Paradigm without Real Data Exposure," in IEEE Transactions on Circuits and Systems for Video Technology, doi: 10.1109/TCSVT.2024.3384756.
+keywords: {Data models;Training;Data privacy;Protocols;Artificial intelligence;Computational modeling;Adaptation models;Data-Free Knowledge Transfer;Privacy Protection;Zero-Shot Learning},
+

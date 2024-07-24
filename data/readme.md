@@ -1,1 +1,2 @@
-You should download dataset like AWA1, AWA2, APY at least.
+You need to download each dataset's features (res101.mat file) into the corresponding dataset folder.
+e.g. rest101.mat --> AWA1

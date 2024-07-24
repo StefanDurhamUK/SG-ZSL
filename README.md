@@ -18,6 +18,7 @@
 
 ## Citation
 If you publish work that uses Flower, please cite Flower as follows:
+
 @ARTICLE{10489996,
   author={Wan, Fan and Miao, Xingyu and Duan, Haoran and Deng, Jingjing and Gao, Rui and Long, Yang},
   journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
